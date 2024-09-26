@@ -21,9 +21,9 @@ class CacheIcommerceOrdertotalDecorator extends BaseCacheDecorator implements Ic
    */
     public function calculate($parameters,$conf)
     {
-        return $this->remember(function () use ($parameters,$conf) {
-            return $this->repository->calculate($parameters,$conf);
-        });
+        
+        return $this->repository->calculate($parameters,$conf);
+        
     }
 
 }
